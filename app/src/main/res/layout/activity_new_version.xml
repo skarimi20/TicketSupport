@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.update.NewVersionActivity">
+
+    <LinearLayout
+        android:id="@+id/version_lay"
+        android:layout_margin="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/new_version"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/version"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_1_1"/>
+
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_below="@id/version_lay"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/download_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/download_link"
+        android:elevation="12dp"
+        android:background="@drawable/buttons"
+        android:textColor="@color/white"
+        android:padding="24dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.ticket.AboutUsFragment">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_marginTop="56dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="@string/ticket_support"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_weight="1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/logo"/>
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/main_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="18dp"
+        android:layout_marginTop="16dp"
+        android:padding="24dp"
+        android:background="@drawable/buttons">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="@string/in_this_application_you_can_create_a_user_with_mobile_number_authentication_and_send_tickets_to_different_departments_and_receive_answers_also_you_can_chat_with_department_support_team_we_build_the_server_side_of_this_application_with_nodejs_mongodb_and_expressjs_framework_which_is_totally_open_source_and_you_can_see_it_n_ndon_t_hesitate_to_send_questions_and_suggests"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_below="@id/main_page"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:background="@drawable/waiting_for_answer"
+            android:text="@string/send_email"
+            android:padding="18dp"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:background="@drawable/waiting_ticket"
+            android:layout_margin="8dp"
+
+            android:text="@string/cancel"
+            android:padding="18dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttons"
+        android:text="@string/version"
+       />
+
+
+</RelativeLayout>

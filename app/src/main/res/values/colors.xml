@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#FAFAFA</color>
+    <color name="colorAccent">#FF9800</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#505050</color>
+    <color name="Lgrey">#BCBCBC</color>
+
+    <color name="setting_items">#4C4C4C</color>
+    <color name="red">#F33C2E</color>
+
+
+
+    <color name="login_start">#7AC4FF</color>
+    <color name="login_center">#4DC7FD</color>
+    <color name="login_end">#20769E</color>
+
+
+    <color name="start_backbround">#ECE9E6</color>
+    <color name="end_backbround">#FFFFFF</color>
+
+    <color name="waiting_for_answer_satrt">#00d2ff</color>
+    <color name="waiting_for_answer_end">#3a7bd5</color>
+
+    <color name="completed_start">#606c88</color>
+    <color name="completed_end">#3f4c6b</color>
+
+    <color name="waiting_start">#FF8008</color>
+    <color name="waiting_end">#FFC837</color>
+
+
+    <color name="answered_start">#134E5E</color>
+    <color name="answered_end">#71B280</color>
+
+    <color name="nav_start">#283048</color>
+    <color name="nav_end">#859398</color>
+
+
+
+
+
+
+
+
+
+</resources>

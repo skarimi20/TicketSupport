@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_page"
+    tools:context=".MainActivity">
+
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_shape"
+        android:layout_centerHorizontal="true"
+        android:elevation="22dp"
+        android:padding="12dp"
+        app:bnc_mode="spread">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            app:bt_icon="@drawable/ic_baseline_assignment_24"
+            app:bt_colorInactive="@color/white"
+            app:bt_title="Home"
+            app:bt_colorActive="@color/login_end"
+            app:bt_badgeBackgroundColor="@color/white"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+             />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nave_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_title="Add Ticket"
+            app:bt_icon="@drawable/ic_baseline_add_comment"
+            app:bt_colorActive="@color/login_end"
+            app:bt_colorInactive="@color/white"
+            />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_title="Setting"
+            app:bt_icon="@drawable/ic_baseline_settings"
+            app:bt_colorActive="@color/login_end"
+
+            app:bt_colorInactive="@color/white"
+            />
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+    
+    <FrameLayout
+        android:layout_above="@id/bottom_navigation_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_lay"/>
+
+
+</RelativeLayout>

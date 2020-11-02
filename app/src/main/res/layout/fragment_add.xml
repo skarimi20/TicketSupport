@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ticket.AddFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/top_lay"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="3"
+                        android:id="@+id/title_add_new"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="@string/add_new_ticket"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/login_end"
+                        android:tint="@color/white"
+                        android:id="@+id/send_btn"
+                        android:src="@drawable/ic_baseline_check_24"/>
+
+
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_below="@id/top_lay"
+                    android:id="@+id/add_lay"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="140dp"
+                    android:background="@drawable/buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:animateLayoutChanges="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp" android:id="@+id/department_rel"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="8dp"
+                            android:tint="@color/white"
+                            android:src="@drawable/ic_baseline_business_center_24"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="12dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:text="@string/department"/>
+
+                        <Spinner
+                            android:layout_weight="1"
+                            android:id="@+id/spi_department"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="8dp"
+                            android:padding="6dp"
+                            android:popupBackground="@color/login_end"
+                            android:popupElevation="16dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:animateLayoutChanges="true"
+                        android:id="@+id/priority_rel"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@id/department_rel"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_margin="8dp"
+                            android:tint="@color/white"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_baseline_priority_high_24"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:text="@string/priority"/>
+
+                        <Spinner
+                            android:layout_weight="1"
+                            android:id="@+id/spi_priority"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="8dp"
+                            android:padding="6dp"
+                            android:popupBackground="@color/login_end"
+                            android:popupElevation="16dp"
+                            android:entries="@array/ticket_priority"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:animateLayoutChanges="true"
+                        android:id="@+id/ticket_rel"
+                        android:layout_below="@id/priority_rel"
+                        android:layout_marginTop="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edt_title"
+                            android:background="@drawable/edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:hint="@string/title"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:elevation="4dp"
+                            android:maxLength="20"/>
+
+                        <EditText
+                            android:id="@+id/edt_message"
+                            android:elevation="8dp"
+                            android:layout_margin="20dp"
+                            android:padding="32dp"
+                            android:inputType="textMultiLine"
+                            android:layout_below="@id/edt_title"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/edit_text"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/message"
+                            android:minEms="4"/>
+
+                    </RelativeLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:padding="24dp"
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/progressRel"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/progress_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/progress_text"
+                        android:layout_below="@id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/connecting_to_server"/>
+
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+
+
+
+</RelativeLayout>

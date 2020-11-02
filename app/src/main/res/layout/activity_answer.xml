@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ticket.AnswerActivity">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/title_lay"
+                android:layout_width="match_parent"
+                android:background="@color/nav_start"
+                android:padding="24dp"
+                android:elevation="24dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/title"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"/>
+
+
+                <LinearLayout
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/botton_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/title"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/date"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="date"
+                        android:textColor="@color/white"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/department"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="Department"
+                        android:textColor="@color/waiting_end"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/priority"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="Priority"
+                        android:textColor="@color/waiting_start"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_above="@id/send_message_lay"
+                android:id="@+id/recyclerView"
+                android:layout_below="@id/title_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:id="@+id/send_message_lay"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_text_send"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:elevation="8dp"
+                    android:hint="@string/type"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_margin="16dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/send_btn"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_baseline_send"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/empty_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_wait_for_answer_or_send_a_message"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".ui.login.LoginFragment">
+
+
+
+    <RelativeLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/loginRel"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_number"
+            android:background="@drawable/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:hint="@string/mobile_number"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:elevation="4dp"
+            android:maxLength="11"/>
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edt_code"
+            android:elevation="8dp"
+            android:layout_margin="20dp"
+            android:padding="16dp"
+            android:layout_below="@id/edt_number"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text"
+            android:layout_height="wrap_content"
+            android:hint="@string/code"
+            android:minEms="4"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:layout_below="@+id/loginRel"
+        android:orientation="horizontal">
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttons"
+            android:elevation="12dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttons"
+            android:elevation="12dp"
+            android:text="@string/send_code"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:layout_below="@+id/buttonsRel"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/register_txt"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:padding="24dp"
+        android:animateLayoutChanges="true"
+        android:id="@+id/progressRel"
+        android:layout_centerInParent="true"
+        android:background="@drawable/progress_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/progress_text"
+            android:layout_below="@id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/connecting_to_server"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
