@@ -17,8 +17,8 @@ You will Learn from this Project:
 7. implementation Login, Register, Forget Password and Logout with JWT.
 8. implementation Dark Mode.
 9. implementation Check For Update.
-10. SharedPreferences, CallBack interface, anim and custom shape XML, custom spinner
+10. SharedPreferences, CallBack interface, anim and custom shape XML, custom spinner.
 11. implementation Splash Screen.
-12. 
+12. implementation SMS Login,Register and foreget password system (just for Iran numbers).
 
 ![alt text](https://github.com/skarimi20/TicketSupport/blob/master/Untitled-1.jpg)
